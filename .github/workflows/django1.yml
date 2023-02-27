@@ -21,6 +21,9 @@ jobs:
       uses: actions/setup-python@v3
       with:
         python-version: ${{ matrix.python-version }}
+    - name: Install Library
+      run: |
+        pip install django
     - name: Run Server
       run: |
         python manage.py runserver
